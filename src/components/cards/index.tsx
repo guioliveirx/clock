@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Card } from "../card";
+import { Points } from "../points";
 
 export function Cards() {
     const [time, setTime] = useState(new Date());
@@ -18,17 +19,11 @@ export function Cards() {
 
     return (
         <>
-            <Card>
-                <p className="text-center">{hours}</p>
-            </Card>
-            <span className="text-8xl">:</span>
-            <Card>
-                <p className="text-center">{minutes}</p>
-            </Card>
-            <span className="text-8xl">:</span>
-            <Card>
-                <p className="text-center">{seconds}</p>
-            </Card>
+            <Card hour={hours}/>
+            <Points/>
+            <Card minute={minutes}/>
+            <Points/>
+            <Card second={seconds}/>
         </>
     );
 }
