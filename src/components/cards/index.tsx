@@ -19,11 +19,29 @@ export function Cards() {
 
     return (
         <>
-            <Card hour={hours}/>
-            <Points/>
-            <Card minute={minutes}/>
-            <Points/>
-            <Card second={seconds}/>
+            <Card>
+                <div className="flex justify-center items-center md:h-56 md:w-48 h-40 w-32 bg-teal-100 rounded shadow-xl">
+                    <p className="text-center text-teal-900 md:text-9xl text-7xl ">
+                        {hours}
+                    </p>
+                </div>
+            </Card>
+            <Points />
+            <Card>
+                <div className="flex justify-center items-center md:h-56 md:w-48 h-40 w-32 bg-teal-100 rounded shadow-xl">
+                    <p className="text-center text-teal-900 md:text-9xl text-7xl ">
+                        {minutes}
+                    </p>
+                </div>
+            </Card>
+            <Points />
+            <Card>
+                <div className="justify-center items-center md:h-56 md:w-48 h-40 w-32 bg-teal-100 rounded shadow-xl sm:flex hidden">
+                    <p className="text-center text-teal-900 md:text-9xl text-7xl">
+                        {seconds}
+                    </p>
+                </div>
+            </Card>
         </>
     );
 }
