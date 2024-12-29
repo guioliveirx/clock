@@ -9,7 +9,6 @@ export default function Home() {
         <Cards />
       </div>
       <Greeting hours={Number(new Date().getHours())}/>
-      a
     </div>
 
   );
